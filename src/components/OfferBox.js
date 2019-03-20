@@ -75,7 +75,7 @@ export default class OfferBox extends Component {
               });
               GTS.methods
                 .acceptTradeOffer(this.props.id)
-                .send({ from: this.state.sender })
+                .send({ from: this.state.recipient })
                 .on("transactionHash", () => {
                   Swal.fire({
                     title: "Offer accepted!",
@@ -109,7 +109,7 @@ export default class OfferBox extends Component {
               });
               GTS.methods
                 .declineTradeOffer(this.props.id)
-                .send({ from: this.state.sender })
+                .send({ from: this.state.recipient })
                 .on("transactionHash", () => {
                   Swal.fire({
                     title: "Offer declined!",
