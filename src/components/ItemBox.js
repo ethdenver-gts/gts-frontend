@@ -28,7 +28,7 @@ export default class ItemBox extends Component {
                 #{this.props.id}
               </span>
             </div>
-            <div>{this.state.data}</div>
+            <div>{window.web3.utils.toAscii(this.state.data)}</div>
           </div>
         ) : (
           "Loading..."
